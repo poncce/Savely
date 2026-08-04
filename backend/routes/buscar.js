@@ -12,6 +12,7 @@ router.get('/', async (req, res) => {
 
   try {
     const resultado = await compararPrecios(producto.trim());
+    console.log(JSON.stringify(resultado, null, 2));
     res.json(resultado);
   } catch (err) {
     res.status(500).json({ error: 'Error interno del servidor', detalle: err.message });

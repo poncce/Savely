@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 3000;
 app.use(express.json());
 
 app.get('/', (_req, res) => {
-  res.json({ servicio: 'Savely - Comparador de precios', estado: 'activo' });
+  res.json({ servicio: 'Savely', estado: 'activo' });
 });
 
 app.use('/buscar', buscarRouter);
@@ -21,6 +21,9 @@ function iniciar() {
     });
   });
 }
+
+
+
 
 if (require.main === module) {
   iniciar();
